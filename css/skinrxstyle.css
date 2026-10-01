@@ -1,0 +1,225 @@
+#gnb {
+    width: 100%; /* 전체 너비, 그냥도 100%인데 왜 쓰는 거지? */
+    height: 32px;
+    background: #000000; /* 배경색 흰색 */
+}
+#header {
+}
+#nav {
+}
+#main {
+}
+#footer {
+}
+
+.container {
+    width: 944px;
+    margin: 0 auto;
+    background-color: #ec0a0a59;
+    position: relative;
+}
+
+/* gnb */
+#gnb > .container {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 수직 가운데 정렬, height가 있어야만 기준으로 가능. 없으면 작동 안 함. */
+}
+
+#gnb h6 {
+    font-size: 0.8em; /* em은 기존 폰트 크기를 기준으로 합니다. */
+}
+
+#gnb h6 a {
+    color: #fff;
+}
+
+#gnb h6 a:hover {
+    color: #e40707;
+}
+
+#gnb ul {
+    display: flex;
+}
+
+#gnb ul li {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 0.85em;
+}
+
+#gnb ul li:last-child {
+    padding-right: 0;
+}
+
+#gnb ul li a {
+    color: #f8f2f2;
+    font-size: 12px;
+}
+
+#gnb ul li a:hover {
+    color: #5804f5;
+}
+
+/*
+이미지 표현하는 방법은 딱 3가지가 있습니다.
+1. HTML: img 태그 <img src="이미지경로" alt="대체텍스트">
+2. CSS: background 속성 {background: url("이미지경로/사진.jpg");}
+3. content 속성 <content: url("이미지경로");>
+
+1 vs 2
+ㅇ 1은 의미있는 이미지, 2는 장식용 이미지
+2 vs 3
+ㅇ 2는 배경 이미지로 사용되며, 3은 텍스트 콘텐츠에 이미지를 삽입할 때 사용됩니다.
+
+*/
+
+#gnb h6 span {
+    display: inline-block; /* span은 인라인 요소이므로, width, height, margin, padding을 적용할 수 없습니다. 인라인 요소(<span>, <a>, <strong> 등)는 텍스트처럼 글의 흐름(문맥) 속에서 한 줄로 이어지도록 설계되었습니다. */
+    vertical-align: middle; /* 인라인 요소의 수직 정렬을 위해 vertical-align 속성을 사용합니다. */
+    width: 15px;
+    height: 10px;
+    background: url("../img/icons.png") no-repeat -350px 0;
+    margin-left: 2.5px;
+}
+
+#gnb ul li span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 10px;
+    background: url("../img/icons.png") no-repeat -350px 2px;
+    margin-left: 2.5px;
+}
+
+#gnb ul li:nth-child(3) span {
+    background-position: -299px 2px;
+}
+
+#gnb ul li:nth-child(4) span {
+    background-position: -200px 2px;
+}
+
+#gnb ul li:nth-child(5) span {
+    background-position: -250px 2px;
+}
+
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+ul.menu {
+    display: flex;
+    list-style: none;
+}
+
+ul.menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+ul.menu li a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+    position: relative; /* 가상요소(::after)의 기준점 */
+    display: inline-block; /* 위치 계산이 정확하도록 인라인 블록화 */
+}
+
+/* 가상요소 */
+ul.menu li a.bar::after {
+    content: "";
+    position: absolute;
+    right: -10px; /* ★ 핵심: li의 margin-right(20px)의 절반만큼 오른쪽으로 밀어 글자 사이 정중앙에 배치 */
+    top: 50%; /* ★ 수직 중앙 정렬 */
+    transform: translateY(-50%); /* ★ 수직 중앙 정렬 보정 */
+    width: 1px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.4); /* 배경이 어두울 땐 유지, 배경이 밝다면 #999 추천 */
+}
+
+ul.menu li a:hover {
+    color: #e40707;
+}
+
+.deco-text {
+    font-family: "OkMallangB", serif !important;
+    font-weight: normal; /* bold 기본값이 있는 태그에서도 제대로 보이도록 고정 */
+    line-height: 1.5;
+}
+
+.logo h1 a,
+.logo h1 a span {
+    display: inline-block;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease; /* 0.3초 동안 부드럽게 변화 */
+}
+
+.logo h1 a:hover {
+    transform: scale(1.1); /* 1.1배 확대 */
+}
+
+.search_box {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.search_box input[type="text"] {
+    width: 200px;
+    height: 30px;
+    padding: 0 10px;
+    border: 1.5px solid black;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+}
+
+.search_box button {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-image: url("../img/lip.png"); /* 그림 파일 */
+    background-repeat: no-repeat; /* 반복 금지 */
+    background-position: center; /* 가운데 정렬 */
+    background-size: contain; /* 상자에 맞게 축소 */
+    transition: transform 0.5s ease;
+}
+
+.search_box button:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+#nav {
+}
+
+#nav > .container {
+    border-top: 5px solid #000000;
+    padding-block: 20px;
+}
+
+#nav > .container > ul {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0 40px;
+}
+
+#nav > .container > ul > li > a:hover {
+    color: #f50404;
+}

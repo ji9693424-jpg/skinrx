@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/font.css" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/skinrxstyle.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <nav id="gnb">
+            <div class="container">
+                <h6>
+                    <a href="#">즐겨찾기<span class="ir_so">별 아이콘</span></a>
+                </h6>
+                <!-- <div>가 문단이나 상자를 나누는 큰 벽돌이라면, <span>은 문장 속 특정 글자에 긋는 형광펜입니다. -->
+                <h2 class="ir_so">유틸리티 메뉴</h2>
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li>
+                        <a href="#">마이페이지<span class="ir_so">하트아이콘</span></a>
+                    </li>
+                    <li>
+                        <a href="#">주문배송<span class="ir_so">다운 아이콘</span></a>
+                    </li>
+                    <li>
+                        <a href="#">장바구니<span class="ir_so">장바구니 아이콘</span></a>
+                    </li>
+                    <li><a href="#">문의하기</a></li>
+                </ul>
+                <!--
+                기술적으로는 전부 <div>로 만들어도 CSS만 주면 눈에 보이는 화면은 100% 똑같이 구현할 수 있습니다.
+
+                시각장애인은 코드를 귀로 듣습니다.
+
+                <div>로만 짰을 때:
+                "홈 링크, 소개 링크, 서비스 링크, 고객센터 링크..."
+                (이게 메뉴 목록인지 본문 링크인지, 총 몇 개가 있는지 알 방법이 없음)
+
+                <ul>, <li>로 짰을 때:
+                "목록 시작, 총 4개 항목. 항목 1: 홈 링크, 항목 2: 소개 링크..."
+                사용자는 "아, 4개짜리 메뉴구나" 파악하고, 원치 않으면 목록 전체를 한 번에 건너뛸 수도 있습니다. -->
+            </div>
+        </nav>
+        <!-- Global Navigation Bar -->
+
+        <header id="header">
+            <div class="container">
+                <div class="header_inner">
+                    <ul class="menu">
+                        <li><a href="#" class="bar">TOP SELLER</a></li>
+                        <li><a href="#" class="bar">EVENT</a></li>
+                        <li><a href="#">BEAUTY TESTER</a></li>
+                    </ul>
+                    <div class="logo">
+                        <h1 class="deco-text">
+                            <a href="#">SKIN<span>Rx</span></a>
+                        </h1>
+                    </div>
+                    <form class="search_box" role="search">
+                        <label for="search" class="ir_so">검색</label>
+                        <input type="text" id="search" placeholder="인바디, 거 집에서 하쇼!" />
+                        <button type="submit" class="search_btn">
+                            <span class="ir_so">검색</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <!-- 시멘틱 태그: 코드 자체에 그 영역이 어떤 역할을 하는지 의미가 담겨 있는 HTML 태그. 원래는 div로만 짰는데
+        생긴거임. 검색엔진이 그냥 딱 알아먹으라고 태그가 들어간 거임. -->
+        <!-- container: width를 944px로 고정하고 가운데 정렬하는 역할을 하는 div. 사이트 전체에 공통적으로 들어가는 div. -->
+
+        <nav id="nav">
+            <div class="container">
+                <ul>
+                    <li><a href="#" title="BY BRAND">BY BRAND</a></li>
+                    <li><a href="#" title="SKIN CARE">SKIN CARE</a></li>
+                    <li><a href="#" title="BODY & HAIR">BODY & HAIR</a></li>
+                    <li><a href="#" title="MAKE UP">MAKE UP</a></li>
+                    <li><a href="#" title="HEALTH BEAUTY">HEALTH BEAUTY</a></li>
+                    <li><a href="#" title="FRAGRANCE">FRAGRANCE</a></li>
+                    <li><a href="#" title="MEN">MEN</a></li>
+                    <li><a href="#" title="MOM & BABY">MOM & BABY</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main id="main">
+            <div class="container">
+                <section main_banner></section>
+                <!-- main_banner -->
+                <section class="special_picks"></section>
+                <!-- special_picks -->
+                <section class="magazine"></section>
+                <!-- magazine -->
+                <section class="brand_focus"></section>
+                <!-- brand_focus -->
+                <section class="best_contents"></section>
+                <!-- best_contents -->
+                <section class="tab_box"></section>
+                <!-- tab_box -->
+            </div>
+        </main>
+
+        <footer id="footer"><div class="container"></div></footer>
+    </body>
+</html>

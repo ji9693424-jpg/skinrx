@@ -1,0 +1,8 @@
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+
+@font-face {
+    font-family: "OkMallangB";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2603-1@1.0/OkMallangB-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-display: swap;
+}
